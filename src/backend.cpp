@@ -71,8 +71,12 @@ void Backend::next() {
     } else m_prompt=m_settingHands ? "Zet de klok op "+spoken(m_answer)+"." : "Hoe laat is het?";
     // Start away from the answer, so every hands exercise needs an action.
     m_input=wrap(m_answer+65);
-    QSet<int> unique{m_answer};
-    const int offsets[]={-60,60,-step(),step(),-120,120,30,-30};
+    // Every question asks children to read both hands: include a wrong
+    // minute position as well as a wrong hour, even with only three choices.
+    QSet<int> unique{m_answer, wrap(m_answer+(r->bounded(2) ? step() : -step())),
+                     wrap(m_answer+(r->bounded(2) ? 60 : -60))};
+    QList<int> offsets{step(),-step(),60,-60,2*step(),-2*step(),120,-120};
+    for(int i=offsets.size()-1;i>0;--i) offsets.swapItemsAt(i,r->bounded(i+1));
     for(int d:offsets) { if(unique.size()>=m_optionCount) break; unique.insert(wrap(m_answer+d)); }
     m_options.clear(); for(int t:unique) m_options.append(t);
     for(int i=m_options.size()-1;i>0;--i) m_options.swapItemsAt(i,r->bounded(i+1));

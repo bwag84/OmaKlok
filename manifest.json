@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "bwag84.omaklok",
   "name": "OmaKlok",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Bart Wagener",
   "description": "Nederlandse klokoefeningen voor kinderen van 5–10 jaar. Opent de OmaKlok desktopapp (apart installeren).",
   "kinds": ["bar-widget", "panel"],

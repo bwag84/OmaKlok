@@ -1,4 +1,4 @@
-# Verificatie van versie 0.1.0
+# Verificatie van versie 0.1.1
 
 Getest op Omarchy 4.5.0, x86_64, Qt 6.12.0.
 

@@ -11,7 +11,7 @@
 int main(int argc, char **argv) {
     QGuiApplication app(argc,argv);
     app.setOrganizationName("OmaKlok"); app.setApplicationName("omaklok");
-    app.setApplicationVersion("0.1.0"); app.setDesktopFileName("omaklok");
+    app.setApplicationVersion("0.1.1"); app.setDesktopFileName("omaklok");
     app.setWindowIcon(QIcon(":/omaklok.svg"));
     QLocale::setDefault(QLocale("nl_NL"));
     QQuickStyle::setStyle("Material");

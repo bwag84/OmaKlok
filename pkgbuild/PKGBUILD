@@ -1,5 +1,5 @@
 pkgname=omaklok
-pkgver=0.1.0
+pkgver=0.1.1
 pkgrel=1
 pkgdesc='Nederlandse klokoefeningen voor kinderen van 5–10 jaar'
 arch=('x86_64' 'aarch64')

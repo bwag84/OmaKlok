@@ -40,6 +40,9 @@ private slots:
                     for(const auto &v:b.options()) { QVERIFY(v.toInt()>=0 && v.toInt()<1440); seen.insert(v.toInt()); }
                     QCOMPARE(seen.size(),count);
                     QVERIFY(seen.contains(b.answer()));
+                    bool differentMinutes=false;
+                    for(int t:seen) differentMinutes |= t%60 != b.answer()%60;
+                    QVERIFY(differentMinutes);
                     if(level<4) QCOMPARE(b.time()%b.step(),0);
                     else { QVERIFY(!b.prompt().isEmpty()); QVERIFY(b.answer()!=b.time()); }
                 }

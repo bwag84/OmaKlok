@@ -1,5 +1,6 @@
-Eerste versie van OmaKlok: Nederlandse klokoefeningen voor kinderen van 5–10 jaar.
+OmaKlok 0.1.1: Nederlandse klokoefeningen voor kinderen van 5–10 jaar.
 
+- Antwoordkeuzes verschillen altijd in uren én minuten, zodat beide wijzers nodig zijn.
 - Analoge klok met 3–5 digitale antwoordkeuzes; kanten verwisselbaar.
 - Wijzers zetten met muis of toetsenbord; spatie om te controleren.
 - Vijf niveaus, van hele/halve uren tot tijdverhalen.
