@@ -1,0 +1,24 @@
+pkgname=omaklok
+pkgver=0.1.0
+pkgrel=1
+pkgdesc='Nederlandse klokoefeningen voor kinderen van 5–10 jaar'
+arch=('x86_64' 'aarch64')
+url='https://github.com/bwag84/OmaKlok'
+license=('MIT')
+depends=('qt6-base' 'qt6-declarative' 'qt6-wayland' 'qt6-svg')
+makedepends=('gcc' 'make')
+source=()
+sha256sums=()
+
+build() {
+  cd "$startdir/.."
+  ./bin/build
+}
+
+package() {
+  cd "$startdir/.."
+  install -Dm755 build/omaklok "$pkgdir/usr/bin/omaklok"
+  install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+  install -Dm644 pkgbuild/omaklok.desktop "$pkgdir/usr/share/applications/omaklok.desktop"
+  install -Dm644 pkgbuild/omaklok.svg "$pkgdir/usr/share/icons/hicolor/scalable/apps/omaklok.svg"
+}

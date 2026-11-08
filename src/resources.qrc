@@ -1,0 +1,1 @@
+<RCC><qresource prefix="/"><file>Main.qml</file><file>PracticeClock.qml</file><file>KlokButton.qml</file><file alias="omaklok.svg">../pkgbuild/omaklok.svg</file></qresource></RCC>

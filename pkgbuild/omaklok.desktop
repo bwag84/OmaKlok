@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Name=OmaKlok
+Name[nl]=OmaKlok
+Comment=Practice telling time with analog and digital clocks
+Comment[nl]=Leer klokkijken met wijzers, digitale tijden en tijdverhalen
+Exec=omaklok
+Icon=omaklok
+Terminal=false
+Categories=Education;KidsGame;
+StartupWMClass=omaklok
